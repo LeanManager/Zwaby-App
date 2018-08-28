@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Zwaby.Views.CancelBookingPage"
+             xmlns:ef="clr-namespace:Zwaby.Effects" 
+             Title="Cancellation">
+    
+	<ScrollView>
+
+        <Grid Padding="15,20,15,15" RowSpacing="15">
+            <!-- X rows -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45" />
+                <RowDefinition Height="155" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Please tell us why you would like to cancel your cleaning service:"
+                   TextColor="Black" FontAttributes="Bold"
+                   Grid.Row="0"/>
+
+            <Editor x:Name="cancellationNotes" Margin="0,0,0,25"
+                    Grid.Row="1">
+                <Editor.Effects>
+                    <ef:EditorOutlineEffect Color="Black" Width="1.0" Radius="6.0" />
+                </Editor.Effects> 
+            </Editor>    
+
+            <Button Text="Finish Cancellation" BackgroundColor="White"
+                    FontAttributes="Bold" FontSize="20"
+                    BorderColor="Black" BorderWidth="1.0" TextColor="Black"
+                    Clicked="OnFinishCancellationClicked"
+                    Grid.Row="2">
+                <Button.Effects>   
+                    <ef:ShadowEffect Radius="5" DistanceX="5" DistanceY="5" Color="Black"/>    
+                </Button.Effects>   
+            </Button>    
+            
+        </Grid>
+
+    </ScrollView>
+    
+</ContentPage>

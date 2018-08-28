@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:Zwaby;assembly=Zwaby"
+             xmlns:ef="clr-namespace:Zwaby.Effects" 
+             xmlns:custom="clr-namespace:Zwaby.CustomControls"
+             x:Class="Zwaby.Views.MainPage"
+             Title="Home">
+
+    <ContentPage.Resources>
+        
+        <ResourceDictionary> 
+            
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="26" />
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="White"/> 
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+            </Style>
+            
+            <Style x:Key="imageIcon" TargetType="custom:CircleImage">
+                <Setter Property="BorderWidth" Value="4" />
+                <Setter Property="BorderColor" Value="White"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="CornerRadius" Value="2.0"/>
+                <Setter Property="Margin" Value="20,0,0,0"/>
+            </Style>
+            
+            <Color x:Key="bookColor">#009863</Color>
+            <Color x:Key="bookingColor">#00c191</Color>
+            <Color x:Key="profileColor">#00d2b4</Color>
+            
+        </ResourceDictionary>
+        
+    </ContentPage.Resources>
+        
+</ContentPage>

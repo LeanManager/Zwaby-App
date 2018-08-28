@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard2.0\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard2.0\Xamarin.Forms.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{ABF226B7-CE18-4621-B9F9-18254615325B}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Zwaby.iOS</RootNamespace>
+    <AssemblyName>Zwaby.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>34315</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType></DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution: Carlos Lara (JM56E259LJ)</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <MtouchSdkVersion>11.0</MtouchSdkVersion>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <CodesignProvision>Zwaby Profile</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebuggerPort>26293</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="SQLite-net">
+      <HintPath>..\packages\sqlite-net-pcl.1.4.118\lib\netstandard1.1\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core">
+      <HintPath>..\packages\SQLitePCLRaw.core.1.1.5\lib\Xamarin.iOS10\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.sqlite3">
+      <HintPath>..\packages\SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.5\lib\Xamarin.iOS10\SQLitePCLRaw.provider.sqlite3.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.5\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_green.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.5\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Messaging.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Messaging.4.0.0\lib\Xamarin.iOS10\Plugin.Messaging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Messaging">
+      <HintPath>..\packages\Xam.Plugins.Messaging.4.0.0\lib\Xamarin.iOS10\Plugin.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Stripe.net">
+      <HintPath>..\packages\Stripe.net.10.4.0\lib\netstandard1.2\Stripe.net.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.3.0.3\lib\Xamarin.iOS10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.3.0.3\lib\Xamarin.iOS10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="HockeySDK">
+      <HintPath>..\packages\HockeySDK.Xamarin.5.0.0\lib\Xamarin.iOS10\HockeySDK.dll</HintPath>
+    </Reference>
+    <Reference Include="HockeySDK.iOSBindings">
+      <HintPath>..\packages\HockeySDK.Xamarin.5.0.0\lib\Xamarin.iOS10\HockeySDK.iOSBindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.3.1.0.697729\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.3.1.0.697729\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\packages\Xamarin.Forms.3.1.0.697729\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.3.1.0.697729\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Zwaby\Zwaby.csproj">
+      <Project>{5D67DFD9-1BC9-4715-927A-986A1D64A227}</Project>
+      <Name>Zwaby</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo1024.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo87.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo180.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo20.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo152.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo167.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash320.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash640retina.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash1242retina.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash750retina.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash2048ipad.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash768ipad.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash1536ipad.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash768ipad2.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash1536ipad2.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash768ipad3.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash1536ipad3.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\ioslandscapesplash2208.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\ioslandscapesplash1920tv.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\ioslandscapesplash1024ipad.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\ioslandscapesplash2048ipad.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\ioslandscapesplash1024ipad2.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\ioslandscapesplash2048ipad2.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosnewsplash640.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="CustomRenderers\" />
+    <Folder Include="Effects\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="FileAccessHelper.cs" />
+    <Compile Include="SQLite\SQLite_iOS.cs" />
+    <Compile Include="Stripe_iOS.cs" />
+    <Compile Include="CustomRenderers\ExtendedTimePickerRenderer.cs" />
+    <Compile Include="CustomRenderers\NoCaretField.cs" />
+    <Compile Include="Effects\ButtonShadowEffect.cs" />
+    <Compile Include="Effects\EntryBorderEffect.cs" />
+    <Compile Include="Effects\PickerBorderEffect.cs" />
+    <Compile Include="Effects\DatePickerBorderEffect.cs" />
+    <Compile Include="Effects\TimePickerBorderEffect.cs" />
+    <Compile Include="Effects\EditorBorderEffect.cs" />
+    <Compile Include="CustomRenderers\CircleImageRenderer.cs" />
+    <Compile Include="CustomRenderers\GradientImageRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="child-1245893_1280.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\storyboardimage.png" />
+    <BundleResource Include="Resources\calendaricon.png" />
+    <BundleResource Include="Resources\calendaricon%403x.png" />
+    <BundleResource Include="Resources\calendaricon%402x.png" />
+    <BundleResource Include="Resources\bookingicon.png" />
+    <BundleResource Include="Resources\bookingicon%403x.png" />
+    <BundleResource Include="Resources\bookingicon%402x.png" />
+    <BundleResource Include="Resources\profileicon.png" />
+    <BundleResource Include="Resources\profileicon%403x.png" />
+    <BundleResource Include="Resources\profileicon%402x.png" />
+    <BundleResource Include="Resources\Amaranth-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Cabin-Bold.ttf" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard2.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard2.0\Xamarin.Forms.targets')" />
+</Project>

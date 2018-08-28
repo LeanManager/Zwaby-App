@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:converters="clr-namespace:Zwaby.Converters;assembly=Zwaby"
+             xmlns:ef="clr-namespace:Zwaby.Effects" 
+             xmlns:custom="clr-namespace:Zwaby.CustomControls"
+             x:Class="Zwaby.Views.ServiceLocationPage"
+             Title="Location">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor"
+                        Value="White" />
+                <Setter Property="FontAttributes"
+                        Value="Bold"/>
+                <Setter Property="VerticalTextAlignment"
+                        Value="Center"/>
+                <Setter Property="FontSize"
+                        Value="20"/>
+            </Style>
+            <Style TargetType="custom:CustomEntry">
+                <Setter Property="Margin"
+                        Value="20,0,20,0"/>
+                <Setter Property="BackgroundColor"
+                        Value="White"/>
+                <Setter Property="BorderWidth"
+                        Value="2"/>
+            </Style>
+            <Style TargetType="custom:CustomPicker">
+                <Setter Property="BackgroundColor"
+                        Value="White"/>
+                <Setter Property="BorderWidth"
+                        Value="2"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+           
+    	<Grid RowSpacing="15">
+            <!-- 11 rows -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="42" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />    
+                <RowDefinition Height="85" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="45" />
+                <ColumnDefinition Width="*" />    
+            </Grid.ColumnDefinitions>
+                
+            <custom:GradientImage StartColor="#008c49" EndColor="#00d2b4" Aspect="AspectFill"
+                                  Grid.Row="0" Grid.RowSpan="11"
+                                  Grid.Column="0" Grid.ColumnSpan="3"/>    
+
+            <Label Text="Please enter service location:" x:Name="topLabel"
+                   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Margin="20,17,20,0"/>
+
+            <custom:CustomEntry Placeholder="Street Address" Text="{Binding Street, Mode=TwoWay}"
+                   x:Name="street" Margin="20, 0, 20, 0"
+                   Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+                <custom:CustomEntry.Effects>
+                    <ef:BorderEffect Color="Black" Width="1.0" Radius="6.0"/>
+                </custom:CustomEntry.Effects>     
+            </custom:CustomEntry>        
+
+            <custom:CustomEntry Placeholder="City" Text="{Binding City, Mode=TwoWay}"
+                   x:Name="city" Margin="20, 0, 20, 0"
+                   Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+                <custom:CustomEntry.Effects>
+                    <ef:BorderEffect Color="Black" Width="1.0" Radius="6.0"/>
+                </custom:CustomEntry.Effects>     
+            </custom:CustomEntry>        
+
+            <custom:CustomEntry Placeholder="State" Text="{Binding State, Mode=TwoWay}"
+                   x:Name="state" Margin="20, 0, 20, 0" 
+                   Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
+                <custom:CustomEntry.Effects>
+                    <ef:BorderEffect Color="Black" Width="1.0" Radius="6.0"/>
+                </custom:CustomEntry.Effects> 
+            </custom:CustomEntry>        
+
+            <custom:CustomEntry Placeholder="Zip Code" Text="{Binding ZipCode, Mode=TwoWay}"
+                   x:Name="zipCode" Margin="20, 0, 20, 0" 
+                   Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3">
+                <custom:CustomEntry.Effects>
+                    <ef:BorderEffect Color="Black" Width="1.0" Radius="6.0"/>
+                </custom:CustomEntry.Effects>     
+            </custom:CustomEntry>        
+
+            <Label Text="Please select residence type:" VerticalTextAlignment="End"
+                   Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Margin="20,0,20,0" x:Name="residenceLabel"/>
+
+            <custom:CustomPicker Title="House or Apartment" x:Name="residence" Margin="20, 0, 20, 0"
+                    Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3">
+                <custom:CustomPicker.Items>
+                    <x:String>House</x:String>
+                    <x:String>Apartment</x:String>
+                </custom:CustomPicker.Items>
+
+                <custom:CustomPicker.SelectedIndex>
+                    <Binding Path="ResidenceType">
+                        <Binding.Converter>
+                            <converters:ObjectToIndexConverter x:TypeArguments="x:String">
+                                <x:String>House</x:String>
+                                <x:String>Apartment</x:String>
+                            </converters:ObjectToIndexConverter>
+                        </Binding.Converter>
+                    </Binding>        
+                </custom:CustomPicker.SelectedIndex>
+
+                <custom:CustomPicker.Effects>
+                    <ef:OutlineEffect Color="Black" Width="1.0" Radius="6.0"/>
+                </custom:CustomPicker.Effects>     
+            </custom:CustomPicker> 
+
+            <Label Text="Bedrooms:" Margin="20,0,20,0" x:Name="bedLabel"
+                   Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"/>  
+
+            <custom:CustomPicker Title="Bedrooms" x:Name="bedrooms" 
+                    Grid.Row="7" Grid.Column="1">
+                <custom:CustomPicker.Items>
+                    <x:String>1</x:String>
+                    <x:String>2</x:String>
+                    <x:String>3</x:String>
+                    <x:String>4</x:String>
+                    <x:String>5</x:String>    
+                </custom:CustomPicker.Items>
+
+                <custom:CustomPicker.SelectedIndex>
+                    <Binding Path="Bedrooms">
+                        <Binding.Converter>
+                            <converters:ObjectToIndexConverter x:TypeArguments="x:Double">
+                                <x:Double>1</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>4</x:Double>
+                                <x:Double>5</x:Double>   
+                            </converters:ObjectToIndexConverter>
+                        </Binding.Converter>
+                    </Binding>        
+                </custom:CustomPicker.SelectedIndex>
+
+                <custom:CustomPicker.Effects>
+                    <ef:OutlineEffect Color="Black" Width="1.0" Radius="6.0"/>
+                </custom:CustomPicker.Effects>     
+            </custom:CustomPicker>
+
+            <Label Text="Bathrooms:" Margin="20,0,20,0" x:Name="bathLabel"
+                   Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2"/>  
+
+            <custom:CustomPicker Title="Bathrooms" x:Name="bathrooms"
+                    Grid.Row="8" Grid.Column="1">
+                <custom:CustomPicker.Items>
+                    <x:String>1</x:String>
+                    <x:String>2</x:String>
+                    <x:String>3</x:String>
+                    <x:String>4</x:String>
+                    <x:String>5</x:String>    
+                </custom:CustomPicker.Items>
+
+                <custom:CustomPicker.SelectedIndex >
+                    <Binding Path="Bathrooms">
+                        <Binding.Converter>
+                            <converters:ObjectToIndexConverter x:TypeArguments="x:Double">
+                                <x:Double>1</x:Double>
+                                <x:Double>2</x:Double>
+                                <x:Double>3</x:Double>
+                                <x:Double>4</x:Double>
+                                <x:Double>5</x:Double>    
+                            </converters:ObjectToIndexConverter>
+                        </Binding.Converter>
+                    </Binding>        
+                </custom:CustomPicker.SelectedIndex>
+
+                <custom:CustomPicker.Effects>
+                    <ef:OutlineEffect Color="Black" Width="1.0" Radius="6.0"/>
+                </custom:CustomPicker.Effects>        
+            </custom:CustomPicker> 
+                
+            <custom:ExtendedButton Text="Next" FontAttributes="Bold" BackgroundColor="White" FontSize="22"
+                    Grid.Row="9"  Grid.Column="0" Grid.ColumnSpan="3" Margin="20,15,20,20"
+                    BorderColor="Black" BorderWidth="1.0" TextColor="Black"
+                    Clicked="OnNextClicked">
+                <custom:ExtendedButton.Effects>   
+                    <ef:ShadowEffect Radius="5" DistanceX="5" DistanceY="5" Color="Black"/>    
+                </custom:ExtendedButton.Effects> 
+            </custom:ExtendedButton>   
+            
+        </Grid>
+    </ScrollView>
+</ContentPage>

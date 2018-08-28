@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Zwaby.Views.ServiceDateTimePage"
+             xmlns:local="clr-namespace:Zwaby.CustomControls;assembly=Zwaby"
+             xmlns:ef="clr-namespace:Zwaby.Effects" 
+             xmlns:custom="clr-namespace:Zwaby.CustomControls"
+             Title="Details">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor"
+                        Value="White" />
+                <Setter Property="FontAttributes"
+                        Value="Bold"/>
+                <Setter Property="Margin"
+                        Value="20,0,20,0"/>
+                <Setter Property="FontSize"
+                        Value="20"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ScrollView>
+        
+	<Grid RowSpacing="20">
+        <!-- 9 rows -->    
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="45" />
+            <RowDefinition Height="45" />
+            <RowDefinition Height="30" /> 
+            <RowDefinition Height="45" />     
+            <RowDefinition Height="45" />
+            <RowDefinition Height="120" />    
+            <RowDefinition Height="80" />  
+            <RowDefinition Height="*" />    
+        </Grid.RowDefinitions>   
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>   
+            
+        <custom:GradientImage StartColor="#008c49" EndColor="#00d2b4" Aspect="AspectFill"
+                              Grid.Row="0" Grid.RowSpan="9"/>      
+
+        <Label Text="Please select day and time:" x:Name="topLabel"
+               Grid.Row="0" VerticalTextAlignment="End" Margin="20,15,0,0"/>
+
+        <custom:CustomDatePicker x:Name="datePicker" Margin="20,0,20,0"
+                                 BackgroundColor="White" BorderWidth="2"
+                                 Grid.Row="1" >
+            <custom:CustomDatePicker.Effects>
+                <ef:DateBorderEffect Color="Black" Width="1.0" Radius="6.0"/>    
+            </custom:CustomDatePicker.Effects>        
+        </custom:CustomDatePicker>        
+
+        <custom:CustomTimePicker x:Name="timePicker" Margin="20,0,20,0" BackgroundColor="White" 
+                                 BorderWidth="2" Grid.Row="2" >
+            <custom:CustomTimePicker.Effects>
+                <ef:TimeBorderEffect Color="Black" Width="1.0" Radius="6.0"/>    
+            </custom:CustomTimePicker.Effects>     
+        </custom:CustomTimePicker>          
+
+        <Label Text="Please select cleaning service:" x:Name="serviceLabel"
+               VerticalTextAlignment="End"
+               Grid.Row="3" />   
+
+        <custom:CustomPicker Title="Cleaning Service" x:Name="statePicker" Margin="20,0,20,0"
+                             BackgroundColor="White" BorderWidth="2" Grid.Row="4">
+            <custom:CustomPicker.Items>
+                <x:String>General Cleaning</x:String>
+                <x:String>Deep Cleaning</x:String>   
+            </custom:CustomPicker.Items>  
+
+            <custom:CustomPicker.Effects>
+                <ef:OutlineEffect Color="Black" Width="1.0" Radius="6.0"/>
+            </custom:CustomPicker.Effects>     
+        </custom:CustomPicker>        
+
+        <Label Text="Service instructions (optional):" x:Name="instructionsLabel"
+               Grid.Row="5" VerticalTextAlignment="End"/> 
+
+        <custom:CustomEditor x:Name="instructions" Margin="20,0,20,0" BackgroundColor="White"
+                             BorderWidth="2" Grid.Row="6" >
+            <custom:CustomEditor.Effects>
+                <ef:EditorOutlineEffect Color="Black" Width="1.0" Radius="6.0" />
+            </custom:CustomEditor.Effects>       
+        </custom:CustomEditor>        
+
+        <custom:ExtendedButton Text="Next" BackgroundColor="White" FontAttributes="Bold" FontSize="22"
+                TextColor="Black" BorderColor="Black" BorderWidth="1.0"
+                Grid.Row="7" Clicked="OnNextClicked" Margin="20,10,20,20"> 
+            <custom:ExtendedButton.Effects>   
+                <ef:ShadowEffect Radius="5" DistanceX="5" DistanceY="5" Color="Black"/>    
+            </custom:ExtendedButton.Effects>      
+        </custom:ExtendedButton>        
+
+    </Grid>
+        
+    </ScrollView>
+    
+</ContentPage>
