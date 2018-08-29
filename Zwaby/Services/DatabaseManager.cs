@@ -9,7 +9,7 @@ namespace Zwaby.Services
 {
     public class DatabaseManager
     {
-        const string Url = "https://yourapiname.azurewebsites.net/api/registration";
+        const string Url = "https://zwaby.azurewebsites.net/api/registration";
 
         public async Task<string> AddNewCustomer(string firstName, string lastName, string emailAddress, string phoneNumber, string password)
         {

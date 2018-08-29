@@ -187,16 +187,6 @@
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
-    <AndroidResource Include="Resources\drawable-mdpi\zwabyandroidlogo.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\zwabyandroidlogo.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\zwabyandroidlogo.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\zwabyandroidlogo.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\zwabyandroidlogo.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\androidfreshsplash.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\androidfreshsplash.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\androidfreshsplash.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\androidfreshsplash.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\androidfreshsplash.png" />
     <AndroidResource Include="Resources\layout\shadow.xml" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\calendaricon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\calendaricon.png" />
@@ -213,6 +203,16 @@
     <AndroidResource Include="Resources\drawable-xhdpi\profileicon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\profileicon.png" />
     <AndroidResource Include="Resources\drawable-mdpi\profileicon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\newandroidsplash.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\newandroidsplash.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\newandroidsplash.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\newandroidsplash.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\newandroidsplash.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\newandroidlogo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\newandroidlogo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\newandroidlogo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\newandroidlogo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\newandroidlogo.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="child-1245893_1280.jpg" />

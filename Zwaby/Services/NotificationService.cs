@@ -9,7 +9,7 @@ namespace Zwaby.Services
 {
     public class NotificationService
     {
-        const string Url = "https://yourapiname.azurewebsites.net/api/notification";
+        const string Url = "https://zwaby.azurewebsites.net/api/notification";
 
         public async Task<string> SendEmail(string firstName, string lastName, string phoneNumber, string emailAddress)
         {

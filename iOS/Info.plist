@@ -45,10 +45,6 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<false/>
 	</dict>
-	<key>XSLaunchImageAssets</key>
-	<string>Assets.xcassets/LaunchImage.launchimage</string>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This app does not use Photo Library.</string>
 	<key>UIAppFonts</key>
@@ -56,5 +52,7 @@
 		<string>Amaranth-Regular.ttf</string>
 		<string>Cabin-Bold.ttf</string>
 	</array>
+	<key>XSLaunchImageAssets</key>
+	<string>Assets.xcassets/LaunchImage.launchimage</string>
 </dict>
 </plist>

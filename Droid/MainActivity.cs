@@ -12,7 +12,7 @@ using HockeyApp.Android.Metrics;
 
 namespace Zwaby.Droid
 {
-    [Activity(Label = "Zwaby.Droid", Icon = "@drawable/zwabyandroidlogo", Theme = "@style/MyTheme", MainLauncher = false, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Zwaby.Droid", Icon = "@drawable/newandroidlogo", Theme = "@style/MyTheme", MainLauncher = false, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         private string AppId = "4b5f9b965f884620ae6091d7b03a0f03";

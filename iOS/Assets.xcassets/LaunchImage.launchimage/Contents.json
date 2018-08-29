@@ -1,19 +1,46 @@
 {
   "images": [
     {
-      "minimum-system-version": "9.0",
       "orientation": "landscape",
       "extent": "full-screen",
-      "filename": "ioslandscapesplash1920tv.png",
       "size": "1920x1080",
       "scale": "1x",
-      "idiom": "tv"
+      "idiom": "tv",
+      "minimum-system-version": "9.0"
+    },
+    {
+      "orientation": "landscape",
+      "extent": "full-screen",
+      "size": "1920x1080",
+      "scale": "2x",
+      "idiom": "tv",
+      "minimum-system-version": "11.0"
+    },
+    {
+      "minimum-system-version": "11.0",
+      "orientation": "portrait",
+      "extent": "full-screen",
+      "filename": "iphonexportrait.png",
+      "size": "375x812",
+      "subtype": "2436h",
+      "scale": "3x",
+      "idiom": "iphone"
+    },
+    {
+      "minimum-system-version": "11.0",
+      "orientation": "landscape",
+      "extent": "full-screen",
+      "filename": "iphonexlandscape.png",
+      "size": "812x375",
+      "subtype": "2436h",
+      "scale": "3x",
+      "idiom": "iphone"
     },
     {
       "minimum-system-version": "8.0",
       "orientation": "portrait",
       "extent": "full-screen",
-      "filename": "iosbasesplash1242retina.png",
+      "filename": "pic1.png",
       "size": "414x736",
       "subtype": "736h",
       "scale": "3x",
@@ -23,7 +50,7 @@
       "minimum-system-version": "8.0",
       "orientation": "portrait",
       "extent": "full-screen",
-      "filename": "iosbasesplash750retina.png",
+      "filename": "pic2.png",
       "size": "375x667",
       "subtype": "667h",
       "scale": "2x",
@@ -33,7 +60,7 @@
       "minimum-system-version": "8.0",
       "orientation": "landscape",
       "extent": "full-screen",
-      "filename": "ioslandscapesplash2208.png",
+      "filename": "pic3.png",
       "size": "736x414",
       "subtype": "736h",
       "scale": "3x",
@@ -43,7 +70,7 @@
       "minimum-system-version": "7.0",
       "orientation": "portrait",
       "extent": "full-screen",
-      "filename": "iosbasesplash2048ipad.png",
+      "filename": "pic4.png",
       "size": "1024x1366",
       "scale": "2x",
       "idiom": "ipad"
@@ -52,7 +79,7 @@
       "minimum-system-version": "7.0",
       "orientation": "portrait",
       "extent": "full-screen",
-      "filename": "iosnewsplash640.png",
+      "filename": "pic5.png",
       "size": "320x480",
       "scale": "2x",
       "idiom": "iphone"
@@ -61,7 +88,7 @@
       "minimum-system-version": "7.0",
       "orientation": "portrait",
       "extent": "full-screen",
-      "filename": "iosbasesplash640retina.png",
+      "filename": "pic8.png",
       "size": "320x568",
       "subtype": "retina4",
       "scale": "2x",
@@ -71,7 +98,7 @@
       "minimum-system-version": "7.0",
       "orientation": "portrait",
       "extent": "full-screen",
-      "filename": "iosbasesplash768ipad.png",
+      "filename": "pic9.png",
       "size": "768x1024",
       "scale": "1x",
       "idiom": "ipad"
@@ -80,7 +107,7 @@
       "minimum-system-version": "7.0",
       "orientation": "portrait",
       "extent": "full-screen",
-      "filename": "iosbasesplash1536ipad.png",
+      "filename": "pic10.png",
       "size": "768x1024",
       "scale": "2x",
       "idiom": "ipad"
@@ -89,7 +116,7 @@
       "minimum-system-version": "7.0",
       "orientation": "landscape",
       "extent": "full-screen",
-      "filename": "ioslandscapesplash1024ipad.png",
+      "filename": "pic11.png",
       "size": "1024x768",
       "scale": "1x",
       "idiom": "ipad"
@@ -98,7 +125,7 @@
       "minimum-system-version": "7.0",
       "orientation": "landscape",
       "extent": "full-screen",
-      "filename": "ioslandscapesplash2048ipad.png",
+      "filename": "pic12.png",
       "size": "1024x768",
       "scale": "2x",
       "idiom": "ipad"
@@ -106,7 +133,7 @@
     {
       "orientation": "portrait",
       "extent": "full-screen",
-      "filename": "iosbasesplash320.png",
+      "filename": "pic6.png",
       "size": "320x480",
       "scale": "1x",
       "idiom": "iphone"
@@ -114,7 +141,7 @@
     {
       "orientation": "portrait",
       "extent": "full-screen",
-      "filename": "iosbasesplash640.png",
+      "filename": "pic7.png",
       "size": "320x480",
       "scale": "2x",
       "idiom": "iphone"
@@ -122,7 +149,7 @@
     {
       "orientation": "portrait",
       "extent": "full-screen",
-      "filename": "iosbasesplash640retina.png",
+      "filename": "pic13.png",
       "size": "320x568",
       "subtype": "retina4",
       "scale": "2x",
@@ -131,7 +158,7 @@
     {
       "orientation": "portrait",
       "extent": "to-status-bar",
-      "filename": "iosbasesplash768ipad2.png",
+      "filename": "pic14.png",
       "size": "768x1004",
       "scale": "1x",
       "idiom": "ipad"
@@ -139,7 +166,7 @@
     {
       "orientation": "portrait",
       "extent": "to-status-bar",
-      "filename": "iosbasesplash1536ipad2.png",
+      "filename": "pic15.png",
       "size": "768x1004",
       "scale": "2x",
       "idiom": "ipad"
@@ -147,7 +174,7 @@
     {
       "orientation": "portrait",
       "extent": "full-screen",
-      "filename": "iosbasesplash768ipad3.png",
+      "filename": "pic16.png",
       "size": "768x1024",
       "scale": "1x",
       "idiom": "ipad"
@@ -155,7 +182,7 @@
     {
       "orientation": "portrait",
       "extent": "full-screen",
-      "filename": "iosbasesplash1536ipad3.png",
+      "filename": "pic17.png",
       "size": "768x1024",
       "scale": "2x",
       "idiom": "ipad"
@@ -163,7 +190,7 @@
     {
       "orientation": "landscape",
       "extent": "to-status-bar",
-      "filename": "ioslandscapesplash1024ipad2.png",
+      "filename": "pic19.png",
       "size": "1024x748",
       "scale": "1x",
       "idiom": "ipad"
@@ -171,7 +198,7 @@
     {
       "orientation": "landscape",
       "extent": "to-status-bar",
-      "filename": "ioslandscapesplash2048ipad2.png",
+      "filename": "pic20.png",
       "size": "1024x748",
       "scale": "2x",
       "idiom": "ipad"
@@ -179,7 +206,7 @@
     {
       "orientation": "landscape",
       "extent": "full-screen",
-      "filename": "ioslandscapesplash1024ipad.png",
+      "filename": "pic21.png",
       "size": "1024x768",
       "scale": "1x",
       "idiom": "ipad"
@@ -187,7 +214,7 @@
     {
       "orientation": "landscape",
       "extent": "full-screen",
-      "filename": "ioslandscapesplash2048ipad.png",
+      "filename": "pic22.png",
       "size": "1024x768",
       "scale": "2x",
       "idiom": "ipad"

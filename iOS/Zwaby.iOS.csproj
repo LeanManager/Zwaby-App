@@ -19,7 +19,7 @@
     <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Carlos Lara (25HNU9V3GU)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchFastDev>true</MtouchFastDev>
@@ -28,6 +28,7 @@
     <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType></DebugType>
@@ -35,7 +36,7 @@
     <OutputPath>bin\iPhone\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Distribution: Carlos Lara (JM56E259LJ)</CodesignKey>
+    <CodesignKey>iPhone Developer: Carlos Lara (25HNU9V3GU)</CodesignKey>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>SdkOnly</MtouchLink>
@@ -45,7 +46,7 @@
     <MtouchSdkVersion>11.0</MtouchSdkVersion>
     <MtouchUseLlvm>true</MtouchUseLlvm>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
-    <CodesignProvision>Zwaby Profile</CodesignProvision>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>pdbonly</DebugType>
@@ -53,12 +54,13 @@
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Carlos Lara (25HNU9V3GU)</CodesignKey>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchLink>None</MtouchLink>
     <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -68,7 +70,7 @@
     <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Carlos Lara (25HNU9V3GU)</CodesignKey>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <MtouchDebug>true</MtouchDebug>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
@@ -80,6 +82,7 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -153,38 +156,49 @@
     <ImageAsset Include="Assets.xcassets\Contents.json">
       <InProject>false</InProject>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo1024.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo40.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo60.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo58.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo87.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo80.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo120.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo180.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo20.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo29.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo76.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo152.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\zwabybarelogo167.png" />
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash320.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash640retina.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash1242retina.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash750retina.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash2048ipad.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash768ipad.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash1536ipad.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash768ipad2.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash1536ipad2.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash768ipad3.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosbasesplash1536ipad3.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\ioslandscapesplash2208.png" />
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\ioslandscapesplash1920tv.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\ioslandscapesplash1024ipad.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\ioslandscapesplash2048ipad.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\ioslandscapesplash1024ipad2.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\ioslandscapesplash2048ipad2.png" />
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iosnewsplash640.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iphonexportrait.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\iphonexlandscape.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic1.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic2.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic3.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic4.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic5.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic6.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic7.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic8.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic9.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic10.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic11.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic12.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic13.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic14.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic15.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic16.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic17.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic19.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic20.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic21.png" />
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\pic22.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\87.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\180.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\20.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\58x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40xx.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\80x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\152.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\167.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\1024.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -220,7 +234,6 @@
     <EmbeddedResource Include="child-1245893_1280.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\storyboardimage.png" />
     <BundleResource Include="Resources\calendaricon.png" />
     <BundleResource Include="Resources\calendaricon%403x.png" />
     <BundleResource Include="Resources\calendaricon%402x.png" />

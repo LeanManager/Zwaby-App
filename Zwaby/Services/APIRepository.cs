@@ -11,7 +11,7 @@ namespace Zwaby.Services
 {
     public class APIRepository: IAPIRepository
     {
-        const string Url = "https://yourapiname.azurewebsites.net/api/payment";
+        const string Url = "https://zwaby.azurewebsites.net/api/payment";
         //private string authorizationKey;
 
         public async Task<string> ChargeCard(string token, int amount)

@@ -9,7 +9,7 @@ namespace Zwaby.Services
 {
     public class BookingsManager
     {
-        const string Url = "https://yourapiname.azurewebsites.net/api/bookings";
+        const string Url = "https://zwaby.azurewebsites.net/api/bookings";
 
         public async Task<string> AddNewBooking(string serviceDate, string serviceTime, string servicePrice,
                                                 string serviceApproximateDuration, string serviceStreet, string serviceCity,
